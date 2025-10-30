@@ -1,0 +1,23 @@
+/*
+# HTTP Requests Without a Browser
+
+We may assume that HTTP requests can only be made with a browser. This isn't true. Many tools support sending HTTP requests. Hackers frequently use non-browser based tools to exploit website vulnerabilities.
+
+## Valid Form Data Request
+*/
+POST http://127.0.0.1:8080/flowershop
+Content-Type: application/x-www-form-urlencoded
+
+name=2300+Cafe&phone=607-555-5555&bouquet=1&request-sample=
+/*
+## Invalid Form Data Request
+
+A hacker doesn't need to use a browser to send HTTP data to your server. Even if your website doesn't permit the user to select an invalid option, like radio buttons, a hacker still submit a request that has invalid options.
+
+In this example a "hacker" try to request a sample of zinnias. (There are no zinnia samples.)
+*/
+###
+POST http://127.0.0.1:8080/flowershop
+Content-Type: application/x-www-form-urlencoded
+
+name=2300+Cafe&phone=607-555-5555&bouquet=zinnias&request-sample=

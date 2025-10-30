@@ -1,0 +1,400 @@
+/* Note: No credit is provided for submitting design and/or code that is taken */
+/*       from course-provided examples.                                        */
+/*                                                                             */
+/* Do not copy this code into your project submission and then change it.      */
+/*                                                                             */
+/* Write your own code from scratch. Use this example as a REFERENCE only.     */
+/*                                                                             */
+/* You may not copy this code, change a few names/variables, and then claim it */
+/* as your own. It does not matter if you can explain what every line does.    */
+/*                                                                             */
+/* Examples are provided to help you learn. Copying the example and then       */
+/* changing it a bit, does not help you learn the learning objectives of this  */
+/* assignment. You need to write your own code from scratch to help you learn. */
+
+html {
+  font-family: sans-serif;
+  background-color: #556688;
+}
+
+h1,
+a {
+  color: navy;
+}
+
+h2 {
+  color: #4682B4;
+}
+
+header {
+  color: white;
+  background-color: #556688;
+  padding: 1px 0 30px 0;
+}
+
+header a {
+  font-weight: bold;
+  color: white;
+}
+
+header #title {
+  color: white;
+  padding: 10px;
+}
+
+#menu {
+  display: inline;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu li {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+}
+
+footer {
+  padding: 10px 10px;
+  background-color: #556688;
+  color: white;
+}
+
+footer a {
+  font-weight: bold;
+  color: white;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 20px;
+}
+
+figure img {
+  width: 200px;
+}
+
+main {
+  padding: 10px;
+}
+
+blockquote {
+  margin-left: 0;
+  border-left: solid #878787 4px;
+  padding-left: 0.5em;
+}
+
+cite {
+  display: block;
+  font-size: 70%;
+}
+
+/* Note: No credit is provided for submitting design and/or code that is taken */
+/*       from course-provided examples.                                        */
+/*                                                                             */
+/* Do not copy this code into your project submission and then change it.      */
+/*                                                                             */
+/* Write your own code from scratch. Use this example as a REFERENCE only.     */
+/*                                                                             */
+/* You may not copy this code, change a few names/variables, and then claim it */
+/* as your own. It does not matter if you can explain what every line does.    */
+/*                                                                             */
+/* Examples are provided to help you learn. Copying the example and then       */
+/* changing it a bit, does not help you learn the learning objectives of this  */
+/* assignment. You need to write your own code from scratch to help you learn. */
+
+table {
+  /* required. remove extra space between table cells */
+  border-spacing: 0;
+
+  /* frame the table with a border on top and bottom */
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+table tr {
+  /* default table background color */
+  background-color: #ffffff;
+}
+
+table tr:nth-child(even) {
+  /* alternate row color */
+  background-color: #cccccc;
+}
+
+/* table headers */
+table th {
+  text-align: left;
+  font-weight: bold;
+
+  /* required for scrolling table header: must specify color of cell */
+  background-color: #ffffff;
+
+  /* line underneath header */
+  border-bottom: 1px solid #000000;
+
+  /* spacing between cells */
+  padding: 10px;
+
+  /* scrolling table header */
+  position: sticky;
+  top: 0px;
+}
+
+/* table cells (not header data) */
+table td {
+  text-align: left;
+  font-weight: normal;
+
+  /* cell border */
+  /* border-bottom: 1px solid #000000; */
+
+  /* spacing between cells */
+  /* padding: 8px; */
+
+  /* spacing between columns */
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* remove spacing between columns on last column */
+table td:last-child {
+  padding-right: 8px;
+}
+
+table .min {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.error {
+  display: inline-block;
+  background-color: white;
+  border: 1px #b92467 solid;
+  color: #b92467;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.active_page {
+  font-weight: bold;
+  border-color: white;
+  border-style: solid;
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  color: inherit;
+  vertical-align: -0.125em;
+}
+
+.feedback {
+  color: #dc341e;
+  font-weight: bold;
+  margin-top: 0.5em !important;
+  margin-bottom: -0.25em !important;
+}
+
+main.courses div.course-tile {
+  display: flex;
+  flex-direction: row;
+}
+
+main.courses figure {
+  padding: 5px;
+  margin: 20px;
+  margin-left: 0;
+  border: 1px solid #eeeeee;
+}
+
+main.courses figcaption {
+  font-size: 90%;
+  text-align: left;
+}
+
+main.courses form {
+  display: inline-block;
+}
+
+main.courses form div {
+  margin: 6px 0;
+}
+
+main.courses .form-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+main.courses #request-email {
+  min-width: 180px;
+  max-width: 240px;
+  margin-left: 4px;
+  flex-grow: 1;
+}
+
+main.courses #request-submit {
+  margin: 8px 0;
+}
+
+main.flowers form {
+  display: inline-block;
+}
+
+main.flowers form * {
+  margin-bottom: 4px;
+}
+
+main.flowers .label-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+main.flowers .label-input> :first-child {
+  width: 140px;
+  text-align: right;
+  margin-right: 6px;
+}
+
+main.flowers .form-group {
+  align-items: flex-start;
+}
+
+main.flowers .form-group> :first-child {
+  width: 140px;
+  text-align: right;
+  margin-right: 6px;
+}
+
+main.flowers input[type=radio] {
+  margin-left: 0;
+}
+
+main.flowers .feedback {
+  margin-bottom: 0.25em !important;
+}
+
+main.transcript {
+  margin-bottom: 1em;
+}
+
+main.transcript table th a {
+  color: #000000;
+  text-decoration: none;
+}
+
+main.transcript table th svg .inactive {
+  fill: #bbbbbb;
+}
+
+main.transcript table td {
+  height: 42px;
+}
+
+main.transcript table {
+  width: 100%;
+}
+
+main.transcript form {
+  margin-top: 1em;
+}
+
+main.transcript .label-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+main.transcript .label-input> :first-child {
+  flex-grow: 0;
+  text-align: right;
+  margin-right: 6px;
+}
+
+main.reviews ul {
+  margin: 0;
+  padding: 0;
+}
+
+main.reviews .tile {
+  list-style: none;
+  padding: 0;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid #edebe7;
+
+  margin: 0 auto;
+  margin-bottom: 1.2em;
+  max-width: 600px;
+}
+
+main.reviews ul>li:last-child.tile {
+  border: none;
+}
+
+main.reviews .tile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+main.reviews .tile .tile-header h3 {
+  width: 75%;
+  margin: 0;
+}
+
+main.reviews .tile .tile-header .tile-rating {
+  width: 25%;
+  text-align: right;
+  font-size: 16pt;
+}
+
+main.reviews .tile .tile-review {
+  margin: 0;
+}
