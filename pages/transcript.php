@@ -39,38 +39,38 @@ if ($order_param == "asc") {
 }
 
 // SQL query parts
-$sql_select_clause = "TODO: 1. select clause";
-
-// validate sort's order parameter
-if ($order_param == "asc") {
-  $sql_sort_order = "TODO: 5. sort order for ascending";
-} else if ($order_param == "desc") {
-  $sql_sort_order = "TODO: 6. sort order for descending";
-} else {
-  // no order
-  $sql_sort_order = NULL;
-}
-
-// order by SQL clause
-$sql_order_clause = "TODO: 2. DEFAULT order clause"; // no default order
-if ($sql_sort_order) {
-  $sql_order_clause = "TODO: 7. complete order clause (includes field and order)";
-}
-
-// build the final query
-// glue the select clause to the order clause
-$sql_query = "TODO: 3 concatenate select and order clauses";
-
-// query grades table
-// TODO: 4. query using the "assembled" query ($sql_select_query)
-$records = exec_sql_query($db, "SELECT
+$sql_select_clause = "SELECT
   grades.id AS 'grades.id',
   courses.number AS 'courses.number',
   courses.credits AS 'courses.credits',
   grades.term AS 'grades.term',
   grades.acad_year AS 'grades.acad_year',
   grades.grade AS 'grades.grade'
-FROM grades INNER JOIN courses ON (grades.course_id = courses.id)")->fetchAll();
+FROM grades INNER JOIN courses ON (grades.course_id = courses.id)";
+
+// validate sort's order parameter
+if ($order_param == "asc") {
+  $sql_sort_order = "ASC";
+} else if ($order_param == "desc") {
+  $sql_sort_order = "DESC";
+} else {
+  // no order
+  $sql_sort_order = NULL;
+}
+
+// order by SQL clause
+$sql_order_clause = ""; // no default order
+if ($sql_sort_order) {
+  $sql_order_clause = "ORDER BY courses.number". " " . $sql_sort_order;
+}
+
+// build the final query
+// glue the select clause to the order clause
+$sql_query = $sql_select_clause . $sql_order_clause;
+
+// query grades table
+// TODO: 4. query using the "assembled" query ($sql_select_query)
+$records = exec_sql_query($db, $sql_query)->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
